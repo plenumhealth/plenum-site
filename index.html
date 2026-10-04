@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plenum Health | Research that reaches people</title>
+  <meta name="description" content="Plenum Health builds software that matches people to the right healthcare opportunities, using data to connect underserved patients with care, trials, and programs they qualify for but might otherwise miss.">
+  <meta property="og:title" content="Plenum Health | Research that reaches people">
+  <meta property="og:description" content="Software that connects underserved patients with the care, trials, and programs they qualify for.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-icon.png">
+  <meta name="theme-color" content="#26333e">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #26333e;
+      --navy-2: #33434f;
+      --slate: #53687b;
+      --slate-tint: #a9bccb;
+      --magenta: #88465b;
+      --magenta-tint: #d9a3b5;
+      --cream: #f9f7f6;
+      --white: #ffffff;
+      --muted: #566876;
+      --line: #e6dfd3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--navy);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column;
+    }
+    main { flex: 1; display: flex; flex-direction: column; }
+    .hero { flex: 1; }
+    a { color: inherit; }
+
+    header {
+      position: absolute; inset: 0 0 auto 0; z-index: 2;
+      display: flex; align-items: center; justify-content: space-between;
+      width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: 24px 0;
+    }
+    .brand { display: flex; align-items: center; text-decoration: none; }
+    .brand img { height: 46px; width: auto; display: block; }
+    .foot-logo { height: 36px; width: auto; display: block; margin: 0 auto 8px; }
+    .nav-link {
+      text-decoration: none; color: #fff; font-size: .95rem; font-weight: 500;
+      padding: 9px 18px; border: 1px solid rgba(255,255,255,.35); border-radius: 999px;
+      transition: background .2s;
+    }
+    .nav-link:hover { background: rgba(255,255,255,.12); }
+
+    .hero {
+      position: relative; overflow: hidden; color: #fff;
+      background:
+        radial-gradient(800px 500px at 88% 8%, rgba(136,70,91,.55), transparent 60%),
+        radial-gradient(700px 500px at 0% 100%, rgba(83,104,123,.5), transparent 60%),
+        var(--navy);
+      padding: 104px 24px 36px;
+      display: flex; align-items: center;
+    }
+    .rings { position: absolute; right: -140px; top: 50%; transform: translateY(-50%); width: 640px; height: 640px; pointer-events: none; }
+    .wrap { width: 100%; max-width: 1120px; margin: 0 auto; position: relative; }
+    .eyebrow { display: inline-block; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--magenta-tint); font-weight: 600; margin-bottom: 20px; }
+    h1 {
+      font-family: "Fraunces", Georgia, serif; font-weight: 600;
+      font-size: clamp(2.4rem, min(6.5vw, 10.5vh), 5rem); line-height: 1.05; letter-spacing: -.02em;
+      max-width: 13ch;
+    }
+    h1 em { font-style: normal; color: var(--magenta-tint); }
+    .lede { margin-top: clamp(16px, 3vh, 28px); max-width: 40rem; font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: rgba(255,255,255,.86); }
+    .cta-row { margin-top: clamp(22px, 4vh, 38px); display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; text-decoration: none; font-weight: 600; font-size: 1rem;
+      padding: 14px 28px; border-radius: 999px; transition: transform .15s, box-shadow .15s, background .2s;
+    }
+    .btn-primary { background: var(--magenta); color: #fff; }
+    .btn-primary:hover { background: #9a5269; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,.28); }
+
+
+
+
+    footer { border-top: 1px solid var(--line); padding: 18px 24px 20px; text-align: center; color: var(--muted); font-size: .9rem; }
+
+
+    /* Contact form modal */
+    dialog.form-modal {
+      border: 0; padding: 0; margin: auto; overflow: hidden; background: #fff; color: var(--navy);
+      width: min(680px, calc(100vw - 24px)); height: min(900px, calc(100vh - 24px)); height: min(900px, calc(100dvh - 24px));
+      border-radius: 20px; box-shadow: 0 30px 80px rgba(0,0,0,.45);
+    }
+    dialog.form-modal[open] { display: flex; flex-direction: column; animation: pop .22s ease-out; }
+    dialog.form-modal::backdrop { background: rgba(38,51,62,.62); backdrop-filter: blur(3px); }
+    .modal-bar { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px 12px 22px; border-bottom: 1px solid var(--line); background: var(--cream); }
+    .modal-bar h2 { font-family: "Fraunces", Georgia, serif; font-size: 1.15rem; font-weight: 600; }
+    .modal-actions { display: flex; align-items: center; gap: 12px; }
+    .modal-newtab { font-size: .82rem; color: var(--muted); }
+    .modal-close { width: 38px; height: 38px; border-radius: 50%; border: 0; cursor: pointer; background: var(--navy); color: #fff; font-size: 1.4rem; line-height: 1; display: grid; place-items: center; transition: background .2s; }
+    .modal-close:hover { background: var(--magenta); }
+    .modal-close:focus-visible, .modal-newtab:focus-visible { outline: 3px solid var(--magenta-tint); outline-offset: 2px; }
+    .modal-body { position: relative; flex: 1; min-height: 0; }
+    .modal-loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); }
+    .modal-body iframe { position: relative; width: 100%; height: 100%; border: 0; display: block; }
+    @keyframes pop { from { opacity: 0; transform: translateY(10px) scale(.985); } to { opacity: 1; transform: none; } }
+    html.modal-open { overflow: hidden; }
+    @media (max-width: 520px) { dialog.form-modal { width: 100vw; height: 100vh; height: 100dvh; max-height: none; border-radius: 0; } .modal-newtab { display: none; } }
+
+    @media (max-width: 820px) {
+      .hero { padding: 104px 24px 48px; }
+      .rings { width: 440px; height: 440px; right: -200px; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="brand" href="#" aria-label="Plenum Health home">
+      <img src="assets/logo-light.png" alt="Plenum Health" width="138" height="46">
+    </a>
+    <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLScQ9MS7P_MVmsYoYwRnBGnnAukIM0tSnRbb3kTgdxe3F2HfuQ/viewform?usp=dialog" data-form-link target="_blank" rel="noopener">Get in touch</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <svg class="rings" viewBox="0 0 640 640" fill="none" stroke-width="1.5" aria-hidden="true">
+        <circle cx="320" cy="320" r="90" stroke="#d9a3b5" opacity=".55"/>
+        <circle cx="320" cy="320" r="170" stroke="#a9bccb" opacity=".4"/>
+        <circle cx="320" cy="320" r="250" stroke="#d9a3b5" opacity=".28"/>
+        <circle cx="320" cy="320" r="315" stroke="#a9bccb" opacity=".2"/>
+      </svg>
+      <div class="wrap">
+        <h1>Research that <em>reaches</em> people.</h1>
+        <p class="lede">We build technology that matches people to the right healthcare opportunities, using data to connect underserved patients with programs they qualify for but might otherwise miss.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScQ9MS7P_MVmsYoYwRnBGnnAukIM0tSnRbb3kTgdxe3F2HfuQ/viewform?usp=dialog" data-form-link target="_blank" rel="noopener">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <footer><img class="foot-logo" src="assets/logo.png" alt="Plenum Health" width="120" height="40">&copy; <span id="yr">2026</span> Plenum Health, Inc. All rights reserved.</footer>
+
+  <dialog class="form-modal" id="form-modal" aria-labelledby="form-modal-title">
+    <div class="modal-bar">
+      <h2 id="form-modal-title">Get in touch</h2>
+      <div class="modal-actions">
+        <a class="modal-newtab" href="https://docs.google.com/forms/d/e/1FAIpQLScQ9MS7P_MVmsYoYwRnBGnnAukIM0tSnRbb3kTgdxe3F2HfuQ/viewform?usp=dialog" target="_blank" rel="noopener">Open in new tab</a>
+        <button type="button" class="modal-close" aria-label="Close contact form">&times;</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <p class="modal-loading">Loading&hellip;</p>
+      <iframe title="Plenum Health contact form" data-src="https://docs.google.com/forms/d/e/1FAIpQLScQ9MS7P_MVmsYoYwRnBGnnAukIM0tSnRbb3kTgdxe3F2HfuQ/viewform?embedded=true" width="640" height="1293" frameborder="0" marginheight="0" marginwidth="0">Loading&hellip;</iframe>
+    </div>
+  </dialog>
+
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+
+    // Contact form modal. Without JavaScript the buttons simply open the form in a new tab.
+    (function () {
+      var modal = document.getElementById("form-modal");
+      var frame = modal.querySelector("iframe");
+      var root = document.documentElement;
+      if (typeof modal.showModal !== "function") return; // very old browsers keep the new-tab link
+
+      function open(e) {
+        e.preventDefault();
+        if (!frame.getAttribute("src")) frame.setAttribute("src", frame.getAttribute("data-src")); // load on first open
+        modal.showModal();
+        root.classList.add("modal-open");
+      }
+      function close() { modal.close(); }
+
+      document.querySelectorAll("[data-form-link]").forEach(function (a) { a.addEventListener("click", open); });
+      modal.querySelector(".modal-close").addEventListener("click", close);
+      modal.addEventListener("click", function (e) { if (e.target === modal) close(); }); // click on the dimmed backdrop
+      modal.addEventListener("close", function () { root.classList.remove("modal-open"); });
+    })();
+  </script>
+</body>
+</html>
