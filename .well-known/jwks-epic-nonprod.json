@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "alg": "RS384",
+      "e": "AQAB",
+      "kid": "plenum-epic-nonprod-2026-10",
+      "kty": "RSA",
+      "n": "y1Abp5-7G76jXPIdYnUaSPcDuvW8hSdhY0PxWBbbJ45nIYJOZctciIVKI1LaClTjN5k2oTOzTy59FCHTXBhrG9edEEcaIVgPgg6bTzisqTmJVBfsPQTCv-Jmwj2veNiOsAiQ_GaJYKcSGkOWtLb7gJ2byjF8x2uJrhYyUqU-FWGHm5k46DAmN1_4vvD-e_Xn9abczOLRAcfLKbsJIGPeP6DVWWyOT1y5xxwxvzNI5EnrPoNYmyoMtjfZfRDmhd91DZ_C322xVoBOIvehEaJVWj5Xr3bux13JzXXNOOyMT76U2EY57DHok8Xfqds-niBQO7r0b-B32lT6f0nHrCflKw",
+      "use": "sig"
+    }
+  ]
+}
