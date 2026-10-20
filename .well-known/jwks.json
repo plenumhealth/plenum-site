@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "alg": "RS384",
+      "e": "AQAB",
+      "kid": "plenum-ecw-2026-10",
+      "kty": "RSA",
+      "n": "zftzY-2dVPm0ezxe-WdXGSrpt-DYU0iPIoKj4eij9tOz5A3nwGBmMSazSr6mITO-fx1Wwc0GfNvFWfIrqsW2hbMnwlE8Xr7gclICZq765Tkw6v-j7arrvxNjnXVcGmmQeh0aYHwRMOMzkehnGLDxNVHtDc6HboN8p4IqhmzH3wZv6_68zQqf_2i4lfQe6AjdjHi66abVg1IlI5H30-GzvQMQ8gDsiuTZ3xO0KvHZRlJvfWV3MtgfNgiQv_lDhQ9q2pQsdXmxZTGK8lxnzClp1FIfvLDJf5LO5hVr598nDCUFUQkNpEoUrHOdznygU9ftrRPFfJhFLw5d9vk5_HGSeQ",
+      "use": "sig"
+    }
+  ]
+}
