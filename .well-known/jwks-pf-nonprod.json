@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "use": "sig",
+      "alg": "RS384",
+      "kid": "plenum-pf-nonprod-2026-10",
+      "n": "wXH_FfpoRJPBo8Kw6LCb3eclqDL_ODZGNbsdPpDzObFVOi59tirnNmAsUdPQkVgfZ6Yx4ymCVevOZ2hhDVzdLBky2W7cwAdCmQIe1SYbsN4-ssEBnp3aztBbs8IHjgzTsvnRhphwcIivIR2TmV16KTpGvkJFN-Fmv1sHtmGzoRhqVE-IXtmU4hAFIjYgo59tcVAjHbfDmVAYRgibhqR02743Sw7uTgPp3kD1YqV55L8ZSZKryWV-2Elak0DuiEGkObWIYg6zeZ4Qwp88UYao4nfD-npEQTrEPMvHLz425mGVCXr5dsHvVK-M1kXFStTmgYWMZwgaqKWpUp4s8qRb0w",
+      "e": "AQAB"
+    }
+  ]
+}
