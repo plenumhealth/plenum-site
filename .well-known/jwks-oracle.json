@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "kid": "plenum-oracle-2026-10",
+      "alg": "RS384",
+      "use": "sig",
+      "n": "pTkj7c8B2Pwlv-h5I8cSNaYUcVxDvROj_aiuHN5tpZGwSblMSZqnDaXFZXSxRKwiIrUXO7F4dRKp0Ev7KvafEN44NacIyyzZj0QhpYOUC_lm9xmDcUoqh84IbHVfVHCjA29eNLJpR04xuR7utVkWPtvd6j9Qtmjb_a4m6Cpk5J-uAte3Xe3oJL8PLwHox_-Kjs7JPY0wASUnzy9ulJIMC58BEJSKBLYFBw06sfHEkIpTYoUkY_xJ9L72S9ESOe_fRiwQFC6Pij4rSQyTcEwG9LUaYSSrQyBB7xfJiPAHeq-9oxv4aEIRxVkBCeE7HYrO8Pi-FC5UcYkbwDNO629dxw",
+      "e": "AQAB"
+    }
+  ]
+}
