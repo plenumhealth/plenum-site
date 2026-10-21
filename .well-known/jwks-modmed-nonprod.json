@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "use": "sig",
+      "alg": "RS384",
+      "kid": "plenum-modmed-nonprod-2026-10",
+      "n": "oeZYXmr9CtnKfe_FAj91VEN_WUaP5yG3mLNceaLTRRNx8z3BbAk04IqvvYxyQl-602U142QZ1wiGLUkZWo_zkGITptpDsxXa0FCEvUJTWRbB769ccENCe5c0iHvmBK1S0ckHJbH7e9jOgJwCVCjANtPzYPokydA-USoTg1PS9wrsWnjbjrexfMFah5A_Hu18ffV4xEUW5QpfhOVOYnEg-hvoGrtAzLfZbOmnLoZTrgBN-dG_3Vz1H3XCLM156bu8k_7b8x9LsQpI_Br6j21kAzsHz87_xWBX0ENVYL-qm8Z2OMHx-SR8z5YaCvnSryY5iJ8JXzV0u3IAFQBlbHRgYw",
+      "e": "AQAB"
+    }
+  ]
+}
