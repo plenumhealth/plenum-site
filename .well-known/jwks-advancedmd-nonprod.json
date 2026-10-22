@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "use": "sig",
+      "alg": "RS384",
+      "kid": "plenum-advancedmd-nonprod-2026-10",
+      "n": "yZ4__9JRuGB2e4m-JNAHCHz4g7_8AtHpoNANhC4aRqsHs7AOmZYyslOQMB4CWtFG_eQvYDDZ7pVLnYuYTF6hkS30BmyNxnigAzi1Mw3P4OfA8QYjpVuSU9Gy18c808oUpHILsR0-tLbxYeFdB1D6IQbvsUppMMMNMtic-kwRTT9OCzGWW8h5jKM4xXw3W-DPQllij4yYIlHRDKXJcyJO4KlUDKAbEwNj-Z8p8FgLVOc-x0CGV7cSb6wH4-9yPQ-KZWIpQV57q31vkm8bwknT6sdKD7iVHDK40IlkcRuFtSyWTxOXIWBAKQ8KwK7knf0RiPWU9v7C9mgq72iHuEc3IQ",
+      "e": "AQAB"
+    }
+  ]
+}
