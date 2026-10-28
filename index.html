@@ -150,12 +150,19 @@
     .about-card h3 { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--slate); font-weight: 600; margin-bottom: 8px; }
     .about-card:nth-child(2) h3 { color: var(--magenta); }
     .about-card p { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 1.18rem; line-height: 1.4; }
-    .principles-title { margin: 64px 0 18px; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
-    .principles { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-    .principles li { border-top: 3px solid var(--magenta); padding-top: 16px; }
-    .principles .num { font-family: "Fraunces", Georgia, serif; font-weight: 600; color: var(--magenta); font-size: 1rem; }
-    .principles h4 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 1.2rem; line-height: 1.25; margin: 6px 0 8px; }
-    .principles p { color: var(--muted); font-size: .96rem; }
+    .about { padding-bottom: 88px; }
+    .principles-band {
+      position: relative; overflow: hidden; color: #fff; padding: 72px 24px 80px;
+      background: radial-gradient(700px 360px at 92% 0%, rgba(136,70,91,.45), transparent 62%), radial-gradient(600px 360px at 0% 100%, rgba(83,104,123,.4), transparent 62%), var(--navy);
+    }
+    .principles-wrap { max-width: 1120px; margin: 0 auto; position: relative; }
+    .principles-title { text-align: center; font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--magenta-tint); font-weight: 600; margin: 0 0 44px; }
+    .principles { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); }
+    .principles li { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 6px 20px; border-left: 1px solid rgba(255,255,255,.14); }
+    .principles li:first-child { border-left: 0; }
+    .principles svg { width: 56px; height: 56px; margin-bottom: 22px; fill: none; stroke: var(--magenta-tint); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .principles svg circle:first-child { stroke: rgba(217,163,181,.45); }
+    .principles h4 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: clamp(1.15rem, 1.7vw, 1.4rem); line-height: 1.3; margin: 0; color: #fff; text-wrap: balance; }
 
     /* ---------- Footer ---------- */
     footer { border-top: 1px solid var(--line); padding: 24px 24px 22px; text-align: center; color: var(--muted); font-size: .9rem; }
@@ -198,11 +205,14 @@
       .partners-logos { grid-template-columns: repeat(2, 1fr); gap: 20px 24px; }
       .about { padding: 80px 24px 72px; }
       .about-top { grid-template-columns: 1fr; gap: 32px; }
-      .principles { grid-template-columns: repeat(2, 1fr); gap: 28px 24px; }
+      .principles { grid-template-columns: repeat(2, 1fr); gap: 40px 0; }
+      .principles li:nth-child(3) { border-left: 0; }
+      .principles-band { padding: 56px 24px 64px; }
     }
     @media (max-width: 560px) {
       .cta-row { grid-template-columns: 1fr; }
-      .principles { grid-template-columns: 1fr; }
+      .principles { grid-template-columns: 1fr; gap: 32px; }
+      .principles li { border-left: 0; }
       .nav { gap: 14px; }
     }
     @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
@@ -232,13 +242,13 @@
         <div class="wrap hero-grid">
           <div class="hero-copy">
             <h1>Research that <em>reaches</em> people</h1>
-            <p class="lede">We build technology that matches people to the right healthcare opportunities, using real world data to connect underserved patients with programs they qualify for but might otherwise miss.</p>
+            <p class="lede">An AI-native intelligence platform connecting real world data to research targets</p>
             <div class="cta-row">
               <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScQ9MS7P_MVmsYoYwRnBGnnAukIM0tSnRbb3kTgdxe3F2HfuQ/viewform?usp=dialog" data-form-link data-form="sponsor" target="_blank" rel="noopener">
-                <strong>Sponsors</strong><span>Click to Find Patients</span>
+                <strong>Sponsors</strong><span>Find Subjects</span>
               </a>
               <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScQ9MS7P_MVmsYoYwRnBGnnAukIM0tSnRbb3kTgdxe3F2HfuQ/viewform?usp=dialog" data-form-link data-form="site" target="_blank" rel="noopener">
-                <strong>Sites</strong><span>Click to Win a Study</span>
+                <strong>Sites</strong><span>Win a Trial</span>
               </a>
             </div>
           </div>
@@ -246,7 +256,6 @@
             <img src="assets/platform/realayer-ui.webp" alt="Preview of the ReaLayer platform: a patient finder table beside a map of trial sites" width="1127" height="670">
             <figcaption>
               <span class="realayer-name">ReaLayer<sup>&trade;</sup> <em>by Plenum Health</em></span>
-              <span class="realayer-desc">An AI-native real-world data intelligence platform connecting clinical records to research targets.</span>
             </figcaption>
           </figure>
         </div>
@@ -272,7 +281,7 @@
           <div>
             <span class="about-eyebrow">About Plenum Health</span>
             <h2 id="about-title">Real-world data, put to work for patients, sites, and sponsors.</h2>
-            <p class="about-intro">Plenum Health connects real-world clinical data to the studies that need participants. Sponsors see where eligible patients are before they commit to site activation. Sites and community clinics show what their patients can bring to a study. And patients are considered for opportunities they might never have heard about.</p>
+            <p class="about-intro">Plenum Health uses real-world data to help sponsors assess patient availability when selecting new trial sites or expanding recruitment through sites already selected. By connecting protocol requirements with patient populations across sites, ReaLayer by Plenum Health helps sponsors identify where potentially eligible subjects receive care and guide feasibility, activation, and recruitment decisions. These insights can help sponsors determine whether to add sites or identify additional participants through existing sites, significantly reducing the time and cost of further site feasibility. Sites gain an evidence-based way to demonstrate their recruitment potential for specific studies, while patients can be considered for research opportunities they might otherwise never encounter.</p>
           </div>
           <div class="about-cards">
             <article class="about-card">
@@ -281,32 +290,33 @@
             </article>
             <article class="about-card">
               <h3>Vision</h3>
-              <p>A future where every eligible patient is considered for the right opportunity, wherever they live or receive care.</p>
+              <p>A future where every eligible patient can be considered for a clinical trial, regardless of where they live or receive care.</p>
             </article>
           </div>
         </div>
 
-        <h3 class="principles-title">Core principles</h3>
+      </div>
+    </section>
+
+    <section class="principles-band" aria-labelledby="principles-title">
+      <div class="principles-wrap">
+        <h3 class="principles-title" id="principles-title">Core principles</h3>
         <ol class="principles">
           <li>
-            <span class="num">01</span>
-            <h4>Every patient deserves to be seen.</h4>
-            <p>Eligibility should be considered across whole populations, not only the patients who already reach a research center.</p>
+            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23"/><path d="M11 24s5-8 13-8 13 8 13 8-5 8-13 8-13-8-13-8z"/><circle cx="24" cy="24" r="3.5"/></svg>
+            <h4>Every patient<br>deserves to be seen</h4>
           </li>
           <li>
-            <span class="num">02</span>
-            <h4>Research belongs in every community.</h4>
-            <p>Community clinics and private practices belong in the network alongside academic research hubs.</p>
+            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23"/><path d="M24 36s-8-7-8-14a8 8 0 0 1 16 0c0 7-8 14-8 14z"/><circle cx="24" cy="22" r="3"/></svg>
+            <h4>Research belongs<br>in every community</h4>
           </li>
           <li>
-            <span class="num">03</span>
-            <h4>Data should serve people.</h4>
-            <p>Real-world data matters when it leads to a real person getting a real opportunity.</p>
+            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23"/><circle cx="24" cy="19" r="5"/><path d="M14 35c1-6 5-9 10-9s9 3 10 9"/></svg>
+            <h4>Data should<br>serve people</h4>
           </li>
           <li>
-            <span class="num">04</span>
-            <h4>Kindness is a standard.</h4>
-            <p>We work with patients, sites, and sponsors the way we would want to be treated: clearly, respectfully, and without wasted effort.</p>
+            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23"/><path d="M24 35s-10-6-10-13a5.5 5.5 0 0 1 10-3 5.5 5.5 0 0 1 10 3c0 7-10 13-10 13z"/></svg>
+            <h4>Kindness is<br>a standard</h4>
           </li>
         </ol>
       </div>
@@ -352,8 +362,8 @@
 
       var MODES = {
         general: { t: "Get in touch", s: "" },
-        sponsor: { t: "Sponsors", s: "Find patients for your study" },
-        site:    { t: "Sites",    s: "Win a study with your patient access" }
+        sponsor: { t: "Sponsors", s: "Find subjects for your trial" },
+        site:    { t: "Sites",    s: "Win a trial with your patient access" }
       };
 
       function open(e) {
